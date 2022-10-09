@@ -1,4 +1,7 @@
+import { CategoriaService } from './../categoria.service';
 import { Component, OnInit } from '@angular/core';
+import { Categoria } from './categoria.model';
+import { ConstantPool } from '@angular/compiler';
 
 @Component({
   selector: 'app-categoria-read',
@@ -7,12 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriaReadComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  categorias: Categoria[] = []
+  
   /*Colocando o cabeçalho da Tabela */
   displayedColumns: string[] = ['id', 'nome', 'descricao', 'acoes'];
 
+
+  constructor( private service: CategoriaService ) { }
+
+  /* Sempre que a paniga iniciar chama isso aqui. */
+  ngOnInit(): void {
+    this.findAll();
+  }
+
+
+  findAll() {
+   
+    this.service.findAll().subscribe( 
+      resposta => {
+        console.log(resposta);
+        this.categorias = resposta
+      }
+      
+    )
+  }
 }

@@ -6,6 +6,9 @@ import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HeaderComponent } from "./components/template/header/header.component";
 
+/*IMPORTANTE PARA CONECTAR COM API o BackEnd */
+import { HttpClientModule } from "@angular/common/http";
+
 /*Meus Importes do Projeto.*/
 import { MatToolbarModule } from "@angular/material/toolbar";
 /* Fim*/
@@ -57,7 +60,9 @@ import {MatTableModule} from '@angular/material/table';
     MatCardModule,
     
     /*Meu import Tabela*/
-    MatTableModule
+    MatTableModule,
+
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

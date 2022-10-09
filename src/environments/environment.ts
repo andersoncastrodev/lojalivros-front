@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false, 
+
+  /*ALTEREI AQUI A MINHA URL OBS: coloque uma , depois do false. */
+  baseUrl: 'https://lojalivros-api.herokuapp.com' 
+
 };
 
 /*
