@@ -28,10 +28,14 @@ import { HomeComponent } from './components/views/home/home.component';
 
 /*Meus Importes do Projeto. Icones*/
 import {MatCardModule} from '@angular/material/card';
+import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
 /* Fim*/
 
+/*Meu Importes do Projeto. Table*/
+import {MatTableModule} from '@angular/material/table';
+
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CategoriaReadComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -50,7 +54,10 @@ import {MatCardModule} from '@angular/material/card';
     MatIconModule,
 
     /*Meu import Icone*/
-    MatCardModule
+    MatCardModule,
+    
+    /*Meu import Tabela*/
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent],
