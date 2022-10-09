@@ -1,7 +1,17 @@
+import { HomeComponent } from './components/views/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+/* Aqui se Cria as Rotas */
+const routes: Routes = [
+
+    /*Criando a primeira ROTA */
+    {
+      path: '',
+      component: HomeComponent
+    }
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

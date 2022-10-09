@@ -23,10 +23,15 @@ import { MatListModule } from "@angular/material/list";
 
 /*Meus Importes do Projeto. Icones*/
 import { MatIconModule } from "@angular/material/icon";
+import { HomeComponent } from './components/views/home/home.component';
+/* Fim*/
+
+/*Meus Importes do Projeto. Icones*/
+import {MatCardModule} from '@angular/material/card';
 /* Fim*/
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -42,7 +47,10 @@ import { MatIconModule } from "@angular/material/icon";
     MatListModule,
 
     /*Meu import Icone*/
-    MatIconModule
+    MatIconModule,
+
+    /*Meu import Icone*/
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent],
