@@ -37,6 +37,9 @@ import { CategoriaReadComponent } from './components/views/categoria/categoria-r
 /*Meu Importes do Projeto. Table*/
 import {MatTableModule} from '@angular/material/table';
 
+/*Meu Modulo de Botao */
+import {MatButtonModule} from '@angular/material/button';
+
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CategoriaReadComponent],
   imports: [
@@ -62,7 +65,9 @@ import {MatTableModule} from '@angular/material/table';
     /*Meu import Tabela*/
     MatTableModule,
 
-    HttpClientModule
+    HttpClientModule,
+
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
