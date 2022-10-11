@@ -49,6 +49,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 
 import {MatInputModule} from '@angular/material/input';
 
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CategoriaReadComponent, CategoriaCreateComponent],
   imports: [
@@ -82,7 +84,9 @@ import {MatInputModule} from '@angular/material/input';
 
     MatFormFieldModule,
 
-    MatInputModule
+    MatInputModule,
+
+    MatSnackBarModule
 
   ],
   providers: [],
