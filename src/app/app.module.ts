@@ -41,6 +41,14 @@ import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
 
+/*Import do Form (Formulario) Esse foi manual. */
+import { FormsModule } from "@angular/forms";
+
+/*Import do Campos de Texto. */
+import {MatFormFieldModule} from '@angular/material/form-field';
+
+import {MatInputModule} from '@angular/material/input';
+
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CategoriaReadComponent, CategoriaCreateComponent],
   imports: [
@@ -68,7 +76,14 @@ import { CategoriaCreateComponent } from './components/views/categoria/categoria
 
     HttpClientModule,
 
-    MatButtonModule
+    MatButtonModule,
+
+    FormsModule,
+
+    MatFormFieldModule,
+
+    MatInputModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],
