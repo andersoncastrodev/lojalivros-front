@@ -26,7 +26,7 @@ import { MatListModule } from "@angular/material/list";
 
 /*Meus Importes do Projeto. Icones*/
 import { MatIconModule } from "@angular/material/icon";
-import { HomeComponent } from './components/views/home/home.component';
+import { HomeComponent } from './components/template/home/home.component';
 /* Fim*/
 
 /*Meus Importes do Projeto. Icones*/
@@ -52,9 +52,10 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
+import { LivroReadAllComponent } from './components/views/livro/livro-read-all/livro-read-all.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CategoriaReadComponent, CategoriaCreateComponent, CategoriaDeleteComponent, CategoriaUpdateComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CategoriaReadComponent, CategoriaCreateComponent, CategoriaDeleteComponent, CategoriaUpdateComponent, LivroReadAllComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
