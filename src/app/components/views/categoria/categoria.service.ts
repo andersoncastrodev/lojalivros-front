@@ -19,6 +19,11 @@ export class CategoriaService {
     /*const url = 'api/categorias' */
      return this.http.get<Categoria[]>(url);
   }
+  
+  findById(id: String): Observable<Categoria>{
+     const url = `${this.baseUrl}/categorias/${id}`
+     return this.http.get<Categoria>(url);
+  }
  
   /* Criando o metodo para chamar e enviar os dados para Api*/
   create(categoria: Categoria): Observable<Categoria>{
@@ -34,4 +39,5 @@ export class CategoriaService {
 
     })
   }
+
 }
