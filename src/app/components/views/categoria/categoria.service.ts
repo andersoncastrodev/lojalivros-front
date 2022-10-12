@@ -2,7 +2,7 @@ import { environment } from './../../../../environments/environment';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Categoria } from './categoria-read/categoria.model';
+import { Categoria } from './categoria.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({

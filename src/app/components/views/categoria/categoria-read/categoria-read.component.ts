@@ -1,7 +1,7 @@
 import { Router, Routes } from '@angular/router';
 import { CategoriaService } from './../categoria.service';
 import { Component, OnInit } from '@angular/core';
-import { Categoria } from './categoria.model';
+import { Categoria } from '../categoria.model';
 import { ConstantPool } from '@angular/compiler';
 
 @Component({

@@ -1,6 +1,6 @@
 import { observable, Observable } from 'rxjs';
 import { Router } from '@angular/router';
-import { Categoria } from './../categoria-read/categoria.model';
+import { Categoria } from '../categoria.model';
 import { Component, OnInit } from '@angular/core';
 import { CategoriaService } from '../categoria.service';
 
