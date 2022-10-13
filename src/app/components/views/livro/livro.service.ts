@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Livro } from './livro.model';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { environment } from './../../../../environments/environment';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
