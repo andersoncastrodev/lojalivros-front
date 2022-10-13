@@ -42,7 +42,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
 
 /*Import do Form (Formulario) Esse foi manual. */
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 /*Import do Campos de Texto. */
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -53,9 +53,11 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
 import { LivroReadAllComponent } from './components/views/livro/livro-read-all/livro-read-all.component';
+import { LivroCreateComponent } from './components/views/livro/livro-create/livro-create.component';
+
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CategoriaReadComponent, CategoriaCreateComponent, CategoriaDeleteComponent, CategoriaUpdateComponent, LivroReadAllComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CategoriaReadComponent, CategoriaCreateComponent, CategoriaDeleteComponent, CategoriaUpdateComponent, LivroReadAllComponent, LivroCreateComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -89,7 +91,9 @@ import { LivroReadAllComponent } from './components/views/livro/livro-read-all/l
 
     MatInputModule,
 
-    MatSnackBarModule
+    MatSnackBarModule,
+
+    ReactiveFormsModule
 
   ],
   providers: [],
