@@ -22,7 +22,6 @@ export class LivroService {
 
   create(livro: Livro, id_cat: String): Observable<Livro>{
     const url = `${this.baseUrl}/livros?categoria=${id_cat}`
-    console.log(url)
     return this.http.post<Livro>(url, livro)
   }
   

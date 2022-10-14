@@ -5,12 +5,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-livro-create',
-  templateUrl: './livro-create.component.html',
-  styleUrls: ['./livro-create.component.css']
+  selector: 'app-livro-update',
+  templateUrl: './livro-update.component.html',
+  styleUrls: ['./livro-update.component.css']
 })
-export class LivroCreateComponent implements OnInit {
- 
+export class LivroUpdateComponent implements OnInit {
+
   /*Criando uma verifica de dados Melhor. */
   titulo = new FormControl('',[Validators.minLength(3)])
   nomeAutor = new FormControl('',[Validators.minLength(3)])
@@ -29,18 +29,7 @@ export class LivroCreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.id_cat = this.route.snapshot.paramMap.get('id_cat')!
-  }
-
-  create(): void {
-    this.service.create(this.livro, this.id_cat).subscribe( 
-    (reposta)=>{
-      this.router.navigate([`categorias/${this.id_cat}/livros`])
-        this.service.mensagem('Livro Castrado com Sucesso!')
-    }, 
-    err =>{
-      this.router.navigate([`categorias/${this.id_cat}/livros`])
-      this.service.mensagem('Erro na Castrado do Livro')
-    })
+    this.livro.id = this.route.snapshot.paramMap.get('id')!
   }
 
   cancelar(): void{
@@ -63,6 +52,5 @@ export class LivroCreateComponent implements OnInit {
     return false;
     
   }
-
 
 }
