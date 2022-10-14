@@ -30,6 +30,25 @@ export class LivroUpdateComponent implements OnInit {
   ngOnInit(): void {
     this.id_cat = this.route.snapshot.paramMap.get('id_cat')!
     this.livro.id = this.route.snapshot.paramMap.get('id')!
+    this.findById();
+  }
+
+  findById(){
+    this.service.findById(this.livro.id!).subscribe(   
+      (resposta)=>{
+        this.livro = resposta
+    } )
+  }
+
+  update(){
+    this.service.update(this.livro).subscribe( (resposta)=>{
+      this.router.navigate([`categorias/${this.id_cat}/livros`])
+      this.service.mensagem("Livro Atualizado Com Sucesso!")
+    }, 
+    err =>{
+      this.router.navigate([`categorias/${this.id_cat}/livros`])
+      this.service.mensagem("Erro ao Atualizar o Livro!")
+    })
   }
 
   cancelar(): void{
